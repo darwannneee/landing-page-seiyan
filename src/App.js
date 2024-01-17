@@ -34,17 +34,17 @@ function App() {
         <source src={isMobile ? bgMobile : bgVideo} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
-      <div className="text-white text-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 pt-[370px]">
+      <div className="text-white text-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 pt-[370px] 2xl:pt-[560px]">
         {/* Add your content on top of the video background */}
         <div className="flex mx-auto">
-          <img src={Pallet} className="w-60 h-[70px] mx-5" alt="Pallet" />
-          <img src={Dagora} className="w-60 h-[70px]" alt="Dagora" />
+          <img src={Pallet} className="w-60 h-[70px] mx-5 2xl:w-80 2xl:h-[90px]" alt="Pallet" />
+          <img src={Dagora} className="w-60 h-[70px] mx-5 2xl:w-80 2xl:h-[90px]" alt="Dagora" />
         </div>
       </div>
 
       <div className="text-white text-center absolute -bottom-8 -right-20 transform -translate-x-1/2 -translate-y-1/2">
         {/* Add your content on top of the video background */}
-        <img src={Ballz} className="w-60 h-[100px]" alt="Dagora" />
+        <img src={Ballz} className="w-60 h-[100px] 2xl:w-80 2xl:h-[120px]" alt="Dagora" />
       </div>
     </div>
   );

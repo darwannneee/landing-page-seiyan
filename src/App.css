@@ -709,6 +709,10 @@ video {
   height: 110px;
 }
 
+.h-\[90px\] {
+  height: 90px;
+}
+
 .w-60 {
   width: 15rem;
 }
@@ -766,4 +770,38 @@ video {
 .text-white {
   --tw-text-opacity: 1;
   color: rgb(255 255 255 / var(--tw-text-opacity));
+}
+
+@media (min-width: 1536px) {
+  .\32xl\:h-\[90px\] {
+    height: 90px;
+  }
+
+  .\32xl\:h-\[120px\] {
+    height: 120px;
+  }
+
+  .\32xl\:w-80 {
+    width: 20rem;
+  }
+
+  .\32xl\:pt-\[370px\] {
+    padding-top: 370px;
+  }
+
+  .\32xl\:pt-\[570px\] {
+    padding-top: 570px;
+  }
+
+  .\32xl\:pt-\[670px\] {
+    padding-top: 670px;
+  }
+
+  .\32xl\:pt-\[600px\] {
+    padding-top: 600px;
+  }
+
+  .\32xl\:pt-\[560px\] {
+    padding-top: 560px;
+  }
 }
