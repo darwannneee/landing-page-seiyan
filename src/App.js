@@ -38,8 +38,10 @@ function App() {
         {/* Add your content on top of the video background */}
         <div className="flex mx-auto">
           <img src={Pallet} className="w-60 h-[70px] mx-5 2xl:w-80 2xl:h-[90px]" alt="Pallet" />
-          <img src={Dagora} className="w-60 h-[70px] mx-5 2xl:w-80 2xl:h-[90px]" alt="Dagora" />
+          <img src={Dagora} className="w-60 h-[70px] 2xl:w-80 2xl:h-[90px]" alt="Dagora" />
         </div>
+
+        <input className=""/>
       </div>
 
       <div className="text-white text-center absolute -bottom-8 -right-20 transform -translate-x-1/2 -translate-y-1/2">
