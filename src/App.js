@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import './App.css';
+import './assets/font/font.css'
 
 import bgVideo from "./assets/img/bg.mp4"
 import bgMobile from "./assets/img/bgmobile.mp4"
@@ -8,6 +9,7 @@ import bgMobile from "./assets/img/bgmobile.mp4"
 import Pallet from "./assets/img/PALLET.png"
 import Dagora from "./assets/img/DAGORA.png"
 import Ballz from "./assets/img/$Ballz.png"
+import Arrow from "./assets/img/arrow.png"
 
 function App() {
   const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
@@ -37,17 +39,24 @@ function App() {
       <div className="text-white text-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 pt-[370px] 2xl:pt-[560px]">
         {/* Add your content on top of the video background */}
         <div className="flex mx-auto">
-          <img src={Pallet} className="w-60 h-[70px] mx-5 2xl:w-80 2xl:h-[90px]" alt="Pallet" />
-          <img src={Dagora} className="w-60 h-[70px] 2xl:w-80 2xl:h-[90px]" alt="Dagora" />
+          <img src={Pallet} className="w-[249px] h-[78px] mx-5 2xl:w-80 2xl:h-[90px]" alt="Pallet" />
+          <img src={Dagora} className="w-[249px] h-[78px] 2xl:w-80 2xl:h-[90px]" alt="Dagora" />
         </div>
 
-        <input className=""/>
+        
+        <div className="relative">
+          <input className="w-[520px] h-[55px] ml-5 rounded-2xl text-black text-center MBF pl-10" placeholder="DROP ADDRESS HERE" />
+
+          <div className="absolute right-3 top-1/2 transform -translate-y-1/2 bg-[#3C66F0] w-[40px] h-[38px] flex items-center justify-center rounded-xl mt-0">
+            <img src={Arrow} className="w-[17px] font-bold" alt="Arrow Icon" />
+          </div>
+        </div>
       </div>
 
-      <div className="text-white text-center absolute -bottom-8 -right-20 transform -translate-x-1/2 -translate-y-1/2">
+      {/* <div className="text-white text-center absolute -bottom-9 -right-24 transform -translate-x-1/2 -translate-y-1/2"> */}
         {/* Add your content on top of the video background */}
-        <img src={Ballz} className="w-60 h-[100px] 2xl:w-80 2xl:h-[120px]" alt="Dagora" />
-      </div>
+        {/* <img src={Ballz} className="w-64 h-[100px] 2xl:w-80 2xl:h-[120px]" alt="Dagora" />
+      </div> */}
     </div>
   );
 }
