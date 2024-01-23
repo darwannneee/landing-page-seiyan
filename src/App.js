@@ -4,7 +4,7 @@ import './assets/font/font.css'
 
 import bgVideo from "./assets/img/bg.mp4"
 import bgMobile from "./assets/img/bgmobile.mp4"
-
+import Navbar from "./Components/Navbar";
 
 import Pallet from "./assets/img/PALLET.png"
 import Dagora from "./assets/img/DAGORA.png"
@@ -36,20 +36,16 @@ function App() {
         <source src={isMobile ? bgMobile : bgVideo} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
-      <div className="text-white text-center absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 pt-[370px] 2xl:pt-[560px]">
+
+      <div className="absolute w-full">
+        <Navbar />
+      </div>
+
+      <div className="text-white text-center absolute top-1/2 ml-[170px] md:ml-0 md:left-1/2 transform -translate-x-1/2 -translate-y-1/2 pt-[370px] 2xl:pt-[700px]">
         {/* Add your content on top of the video background */}
         <div className="flex mx-auto">
-          <img src={Pallet} className="w-[249px] h-[78px] mx-5 2xl:w-80 2xl:h-[90px]" alt="Pallet" />
-          <img src={Dagora} className="w-[249px] h-[78px] 2xl:w-80 2xl:h-[90px]" alt="Dagora" />
-        </div>
-
-        
-        <div className="relative">
-          <input className="w-[520px] h-[55px] ml-5 rounded-2xl text-black text-center MBF pl-10" placeholder="DROP ADDRESS HERE" />
-
-          <div className="absolute right-3 top-1/2 transform -translate-y-1/2 bg-[#3C66F0] w-[40px] h-[38px] flex items-center justify-center rounded-xl mt-0">
-            <img src={Arrow} className="w-[17px] font-bold" alt="Arrow Icon" />
-          </div>
+          <img src={Pallet} className="w-36 h-14 md:w-[249px] md:h-[78px] md:mx-5 mx-3 2xl:w-96 2xl:h-[120px]" alt="Pallet" />
+          <img src={Dagora} className="w-36 h-14 md:w-[249px] md:h-[78px] 2xl:w-96 2xl:h-[120px]" alt="Dagora" />
         </div>
       </div>
 
