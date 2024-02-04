@@ -12,11 +12,11 @@ import Ballz from "./assets/img/$Ballz.png"
 import Arrow from "./assets/img/arrow.png"
 
 function App() {
-  const [isMobile, setIsMobile] = useState(window.innerWidth <= 768);
+  const [isMobile, setIsMobile] = useState(window.innerWidth <= 800);
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 768); // Adjust the threshold as needed
+      setIsMobile(window.innerWidth <= 800); // Adjust the threshold as needed
     };
 
     // Call handleResize when the component mounts and when the window size changes
@@ -31,8 +31,8 @@ function App() {
     
 
   return (
-    <div className="App relative h-screen">
-      <video autoPlay playsInline loop muted className="w-full h-full object-cover absolute top-0 left-0">
+    <div className="relative h-screen flex">
+      <video autoPlay playsInline loop muted className="w-full h-screen object-cover absolute top-0 left-0">
         <source src={isMobile ? bgMobile : bgVideo} type="video/mp4" />
           Your browser does not support the video tag.
         </video>
