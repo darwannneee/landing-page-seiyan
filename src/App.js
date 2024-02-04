@@ -16,14 +16,11 @@ function App() {
 
   useEffect(() => {
     const handleResize = () => {
-      setIsMobile(window.innerWidth <= 800); // Adjust the threshold as needed
+      setIsMobile(window.innerWidth <= 800);
     };
 
-    // Call handleResize when the component mounts and when the window size changes
-    handleResize();
     window.addEventListener('resize', handleResize);
 
-    // Clean up event listener when the component unmounts
     return () => {
       window.removeEventListener('resize', handleResize);
     };
@@ -31,9 +28,9 @@ function App() {
     
 
   return (
-    <div className="relative h-screen flex">
-      <video autoPlay playsInline loop muted className="w-full h-screen object-cover absolute top-0 left-0">
-        <source src={isMobile ? bgMobile : bgVideo} type="video/mp4" />
+    <div className="App relative h-screen">
+      <video autoPlay playsInline loop muted className="h-screen w-full object-cover absolute">
+        <source src={isMobile ? bgMobile : bgVideo} type="video/mp4"/>
           Your browser does not support the video tag.
         </video>
 
@@ -41,18 +38,14 @@ function App() {
         <Navbar />
       </div>
 
-      <div className="text-white text-center absolute top-1/2 ml-[170px] md:ml-0 md:left-1/2 transform -translate-x-1/2 -translate-y-1/2 pt-[370px] 2xl:pt-[700px]">
+      <div className="text-white text-center pt-36 2xl:pt-64 absolute top-1/2 left-1/2 -translate-x-1/2">
         {/* Add your content on top of the video background */}
-        <div className="flex mx-auto">
-          <img src={Pallet} className="w-36 h-14 md:w-[249px] md:h-[78px] md:mx-5 mx-3 2xl:w-96 2xl:h-[120px]" alt="Pallet" />
-          <img src={Dagora} className="w-36 h-14 md:w-[249px] md:h-[78px] 2xl:w-96 2xl:h-[120px]" alt="Dagora" />
+        <div className="flex items-center justify-center">
+          <img src={Pallet} className="w-40 h-14 md:w-56 md:h-20 2xl:w-96 2xl:h-32 mx-2 md:mx-5" alt="Pallet" />
+          <img src={Dagora} className="w-40 h-14 md:w-56 md:h-20 2xl:w-96 2xl:h-32" alt="Dagora" />
         </div>
       </div>
 
-      {/* <div className="text-white text-center absolute -bottom-9 -right-24 transform -translate-x-1/2 -translate-y-1/2"> */}
-        {/* Add your content on top of the video background */}
-        {/* <img src={Ballz} className="w-64 h-[100px] 2xl:w-80 2xl:h-[120px]" alt="Dagora" />
-      </div> */}
     </div>
   );
 }
