@@ -35,16 +35,16 @@ function Navbar() {
            
           </div>
           <div className="flex flex-col md:flex-row px-6 py-4">
-            <a>
+            <a href="https://t.co/UbwhXktWOV">
                 <img src={DiscordImg} className="w-32 2xl:w-44" />
             </a>
-            <a>
+            <a href="https://twitter.com/SeiyanNFT">
                 <img src={TwitterImg} className="w-32 2xl:w-44" />
             </a>
-            <a>
+            <a onClick={() => alert('Coming Soon') }>
                 <img src={ToolsImg} className="w-40 2xl:w-56" />
             </a>
-            <a>
+            <a onClick={() => alert('Coming Soon') }>
                 <img src={MultisigImg} className="w-32 2xl:w-44" />
             </a>
           </div>
