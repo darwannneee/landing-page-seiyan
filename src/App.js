@@ -42,10 +42,10 @@ function App() {
         {/* Add your content on top of the video background */}
         <div className="flex items-center justify-center">
           <a href="https://pallet.exchange/collection/seiyan-by-cult">
-            <img src={Pallet} className="w-40 h-14 md:w-56 md:h-20 2xl:w-96 2xl:h-32 mx-2 md:mx-5 " alt="Pallet" />
+            <img src={Pallet} className="w-36 h-14 md:w-56 md:h-20 2xl:w-96 2xl:h-32 mr-2 md:mx-5 " alt="Pallet" />
           </a>
           <a href="https://dagora.xyz/collection/seiMainnet/sei1za9z9l8pwueataj5gx7mwt8g5zrndhjls7yr6tnhan0zlgw2r8fszn5089 hover:transition-shadow">
-            <img src={Dagora} className="w-40 h-14 md:w-56 md:h-20 2xl:w-96 2xl:h-32" alt="Dagora" />
+            <img src={Dagora} className="w-40 h-14 md:w-56 md:h-20 2xl:w-96 2xl:h-32 mx-2" alt="Dagora" />
           </a>
           
         </div>
