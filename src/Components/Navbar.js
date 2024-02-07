@@ -2,14 +2,27 @@ import React, { useState, useEffect } from "react";
 import '../App';
 import '../assets/font/font.css';
 import SeiyanImg from "../assets/img/seiyan.png"
-import DiscordImg from "../assets/img/Discord.png"
-import TwitterImg from "../assets/img/Twitter.png"
-import MultisigImg from "../assets/img/Multisig.png"
-import ToolsImg from "../assets/img/Basictool.png"
-
+import AboutImage from "../assets/img/about.png"
+import Utility from "../assets/img/utility.png"
+import Roadmap from "../assets/img/roadmap.png"
+import Sweep from "../assets/img/sweep.png"
+import Customize from "../assets/img/customize.png"
+import Gallery from "../assets/img/gallery.png"
+import Discord from "../assets/img/Discord.png"
+import Twitter from "../assets/img/Twitter.png"
 
 function Navbar() {
   const [isOpen, setIsOpen] = useState(false)
+  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+
+  const handleDropdownClick = () => {
+    setIsDropdownOpen(!isDropdownOpen);
+  };
+
+  const handleMenuItemClick = (menuItem) => {
+    // Handle menu item click logic here
+    alert(`${menuItem} clicked`);
+  };
 
   return (
 <div>
@@ -34,19 +47,69 @@ function Navbar() {
           <div className="flex flex-col md:flex-row mx-auto">
            
           </div>
-          <div className="flex flex-col md:flex-row px-6 py-4">
+          <div className="flex flex-col md:flex-row px-6 py-4 mx-1">
             <a href="https://t.co/UbwhXktWOV">
-                <img src={DiscordImg} className="w-32 2xl:w-44" />
+              <img src={AboutImage} className="w-28 2xl:w-44 mx-1 mt-1 md:mt-0" alt="Discord" />
+            </a>
+            <div className="relative">
+              <button onClick={handleDropdownClick} className="focus:outline-none">
+                <img src={Utility} className="w-[116px] 2xl:w-44 mx-1 mt-1 md:mt-0" alt="Tools" />
+              </button>
+              {isDropdownOpen && (
+                <div className="absolute mt-2 w-40 bg-white border rounded shadow-lg">
+                  <button
+                    onClick={() => handleMenuItemClick('MenuItem1')}
+                    className="block px-4 py-2 text-gray-800 hover:bg-gray-200 w-full text-left"
+                  >
+                    $ZENSEI
+                  </button>
+                  <button
+                    onClick={() => handleMenuItemClick('MenuItem2')}
+                    className="block px-4 py-2 text-gray-800 hover:bg-gray-200 w-full text-left"
+                  >
+                    MULTISIG
+                  </button>
+                  <button
+                    onClick={() => handleMenuItemClick('MenuItem2')}
+                    className="block px-4 py-2 text-gray-800 hover:bg-gray-200 w-full text-left"
+                  >
+                    RAFFLE PLATFROM
+                  </button>
+                  <button
+                    onClick={() => handleMenuItemClick('MenuItem2')}
+                    className="block px-4 py-2 text-gray-800 hover:bg-gray-200 w-full text-left"
+                  >
+                    NFT LENDING
+                  </button>
+                  <button
+                    onClick={() => handleMenuItemClick('MenuItem2')}
+                    className="block px-4 py-2 text-gray-800 hover:bg-gray-200 w-full text-left"
+                  >
+                    CULT TOOL
+                  </button>
+                  {/* Add more menu items as needed */}
+                </div>
+              )}
+            </div>
+            <a href="https://twitter.com/SeiyanNFT">
+              <img src={Roadmap} className="w-36 2xl:w-44 mx-1 mt-1 md:mt-0" alt="Twitter" />
             </a>
             <a href="https://twitter.com/SeiyanNFT">
-                <img src={TwitterImg} className="w-32 2xl:w-44" />
+              <img src={Sweep} className="w-28 2xl:w-44 mx-1 mt-1 md:mt-0" alt="Twitter" />
             </a>
-            <a onClick={() => alert('Coming Soon') }>
-                <img src={ToolsImg} className="w-40 2xl:w-56" />
+            <a href="https://twitter.com/SeiyanNFT">
+              <img src={Customize} className="w-40 w-2xl:w-44 mx-1 mt-1 md:mt-0" alt="Twitter" />
             </a>
-            <a onClick={() => alert('Coming Soon') }>
-                <img src={MultisigImg} className="w-32 2xl:w-44" />
+            <a href="https://twitter.com/SeiyanNFT">
+              <img src={Gallery} className="w-36 2xl:w-44 mx-1 mt-1 md:mt-0" alt="Twitter" />
             </a>
+            <a href="https://twitter.com/SeiyanNFT">
+              <img src={Discord} className="w-9 2xl:w-44 mx-1 mt-1 md:mt-0" alt="Twitter" />
+            </a>
+            <a href="https://twitter.com/SeiyanNFT">
+              <img src={Twitter} className="w-9 2xl:w-44 mx-1 mt-1 md:mt-0" alt="Twitter" />
+            </a>
+        
           </div>
         </div>
       </div>  
