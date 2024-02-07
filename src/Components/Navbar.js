@@ -27,11 +27,11 @@ function Navbar() {
   return (
 <div>
     {/* Header */}
-    <nav className="bg-transparent w-full shadow-transparent2 flex-col">
+    <nav className="bg-transparent w-full shadow-transparent2 flex-col 2xl:mt-3">
       <div className="flex flex-col md:flex-row">
         <div className={`flex justify-between items-center py-6 px-6 md:border-none ${isOpen ? 'border-b' : 'none'}`}>
             <div>
-              <img src={SeiyanImg} className="w-28 md:w-32 2xl:w-44" />
+              <img src={SeiyanImg} className="w-28 md:w-32 2xl:w-60" />
             </div>
             <div className="items-center block md:hidden">
               <button onClick={() => setIsOpen(!isOpen)} className="mt-2">
@@ -49,11 +49,11 @@ function Navbar() {
           </div>
           <div className="flex flex-col md:flex-row px-6 py-4 mx-1">
             <a href="https://t.co/UbwhXktWOV">
-              <img src={AboutImage} className="w-28 2xl:w-44 mx-1 mt-1 md:mt-0" alt="Discord" />
+              <img src={AboutImage} className="w-28 2xl:w-52 mx-1 mt-1 md:mt-0" alt="Discord" />
             </a>
             <div className="relative">
               <button onClick={handleDropdownClick} className="focus:outline-none">
-                <img src={Utility} className="w-[116px] 2xl:w-44 mx-1 mt-1 md:mt-0" alt="Tools" />
+                <img src={Utility} className="w-[116px]  2xl:w-52 mx-1 mt-1 md:mt-0" alt="Tools" />
               </button>
               {isDropdownOpen && (
                 <div className="absolute mt-2 w-40 bg-white border rounded shadow-lg">
@@ -92,22 +92,22 @@ function Navbar() {
               )}
             </div>
             <a href="https://twitter.com/SeiyanNFT">
-              <img src={Roadmap} className="w-36 2xl:w-44 mx-1 mt-1 md:mt-0" alt="Twitter" />
+              <img src={Roadmap} className="w-36 2xl:w-64 mx-1 mt-1 md:mt-0" alt="Twitter" />
             </a>
             <a href="https://twitter.com/SeiyanNFT">
-              <img src={Sweep} className="w-28 2xl:w-44 mx-1 mt-1 md:mt-0" alt="Twitter" />
+              <img src={Sweep} className="w-28 2xl:w-48 mx-1 mt-1 md:mt-0" alt="Twitter" />
             </a>
             <a href="https://twitter.com/SeiyanNFT">
-              <img src={Customize} className="w-40 w-2xl:w-44 mx-1 mt-1 md:mt-0" alt="Twitter" />
+              <img src={Customize} className="w-40 2xl:w-72 mx-1 mt-1 md:mt-0" alt="Twitter" />
             </a>
             <a href="https://twitter.com/SeiyanNFT">
-              <img src={Gallery} className="w-36 2xl:w-44 mx-1 mt-1 md:mt-0" alt="Twitter" />
+              <img src={Gallery} className="w-36 2xl:w-64 mx-1 mt-1 md:mt-0" alt="Twitter" />
             </a>
             <a href="https://twitter.com/SeiyanNFT">
-              <img src={Discord} className="w-9 2xl:w-44 mx-1 mt-1 md:mt-0" alt="Twitter" />
+              <img src={Discord} className="w-9 2xl:w-16 mx-1 mt-1 md:mt-0" alt="Twitter" />
             </a>
             <a href="https://twitter.com/SeiyanNFT">
-              <img src={Twitter} className="w-9 2xl:w-44 mx-1 mt-1 md:mt-0" alt="Twitter" />
+              <img src={Twitter} className="w-9 2xl:w-16 mx-1 mt-1 md:mt-0" alt="Twitter" />
             </a>
         
           </div>
